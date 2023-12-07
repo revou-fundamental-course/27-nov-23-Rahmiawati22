@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Katik - Kalkulator Luas & Keliling Segitiga</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Welcome to Katik</h1>
+        <p>Hai Sobat, Selamat datang di Katik</p>
+        <p>Sebuah web App sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar.</p>
+    </div>
+
+    <div class="buttons">
+        <button onclick="scrollToSection('luasSegitiga')">Luas Segitiga</button>
+        <button onclick="scrollToSection('kelilingSegitiga')">Keliling Segitiga</button>
+    </div>
+
+    <div class="content luas-content">
+        <div id="luasSegitiga" class="section">
+            <h2>Luas Segitiga</h2>
+
+            <div class="shape-image">
+                <img src="Images/rumus-segitiga.png" alt="Segitiga">
+            </div>
+
+            <p>Rumus luas segitiga:</p>
+            <p class="formula">L = 1/2 × a × t</p>
+            <p>Dimana:</p>
+            <ul>
+                <li>L : Luas</li>
+                <li>a : Panjang Alas</li>
+                <li>t : Tinggi</li>
+            </ul>
+
+            <form id="luasForm">
+                <label for="baseLuas">Panjang Alas:</label>
+                <input type="number" id="baseLuas" required>
+
+                <label for="heightLuas">Tinggi:</label>
+                <input type="number" id="heightLuas" required>
+
+                <button type="button" onclick="calculateLuas()">Hitung Luas</button>
+                <button type="button" onclick="resetLuas()">Reset</button>
+            </form>
+
+            <div id="luasResult">
+                <h3>Hasil Luas:</h3>
+                <p id="luasOutput"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content keliling-content">
+        <div id="kelilingSegitiga" class="section">
+            <h2>Keliling Segitiga</h2>
+
+            <div class="shape-image">
+                <img src="Images/rumus-segitiga.png" alt="Segitiga">
+            </div>
+
+            <p>Rumus keliling segitiga:</p>
+            <p class="formula">K = s1 + s2 + s3</p>
+            <p>Dimana:</p>
+            <ul>
+                <li>K : Keliling</li>
+                <li>s1, s2, s3 : Panjang Sisi</li>
+            </ul>
+
+            <form id="kelilingForm">
+                <label for="side1">Sisi 1:</label>
+                <input type="number" id="side1" required>
+
+                <label for="side2">Sisi 2:</label>
+                <input type="number" id="side2" required>
+
+                <label for="side3">Sisi 3:</label>
+                <input type="number" id="side3" required>
+
+                <button type="button" onclick="calculateKeliling()">Hitung Keliling</button>
+                <button type="button" onclick="resetKeliling()">Reset</button>
+            </form>
+
+            <div id="kelilingResult">
+                <h3>Hasil Keliling:</h3>
+                <p id="kelilingOutput"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
